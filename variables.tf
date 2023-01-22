@@ -9,6 +9,7 @@ variable "spoke_subnets" {
 
 variable "tenancy_ocid" {
   type = string
+  sensitive = true
 }
 
 variable "spoke_vcns" {

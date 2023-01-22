@@ -10,6 +10,7 @@ variable "internet_gateway_enabled" {
 variable "tenancy_ocid" {
   description = "ocid for tenancy compartment"
   type = string
+  sensitive = true
 }
 
 variable "spoke_subnets" {
