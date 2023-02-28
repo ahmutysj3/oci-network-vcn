@@ -7,7 +7,7 @@ variable "spoke_subnets" {
   }))
 }
 
-variable "tenancy_ocid" {
+variable "tenancy" {
   type = string
   sensitive = true
 }
