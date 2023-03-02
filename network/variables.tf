@@ -7,7 +7,7 @@ variable "internet_gateway_enabled" {
   default = true
 }
 
-variable "tenancy" {
+variable "tenancy_ocid" {
   description = "ocid for tenancy compartment"
   type = string
   sensitive = true
