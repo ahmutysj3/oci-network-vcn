@@ -3,7 +3,7 @@ module "network" {
 
   # General OCI Parameters
   region_pri   = "us-ashburn-1"
-  main_compartment =  = var.main_compartment
+  main_compartment = var.main_compartment
   
   # Network Params
   dc_name       = "trace"
