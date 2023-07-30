@@ -9,8 +9,8 @@ variable "internet_gateway_enabled" {
 
 variable "main_compartment" {
   description = "ocid for tenancy compartment"
-  type = string
-  sensitive = true
+  type        = string
+  sensitive   = true
 }
 
 variable "spoke_subnets" {
@@ -74,7 +74,7 @@ variable "operating_system" {
 variable "custom_image" {
   description = "used for pfsense image in bucket"
   type        = string
-  default = "pfsense.img"
+  default     = "pfsense.img"
 }
 
 variable "shape_config" {
@@ -104,7 +104,7 @@ variable "deploy_fw" {
 
 variable "bucket" {
   description = "name of bucket containing pfsense img"
-  default = "bucket-20221114-1400"
+  default     = "bucket-20221114-1400"
 }
 
 variable "nsg_params" {

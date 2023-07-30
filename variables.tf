@@ -8,9 +8,9 @@ variable "spoke_subnets" {
 }
 
 variable "main_compartment" {
-  type = string
+  type      = string
   sensitive = true
-  default = "ocid1.compartment.oc1..aaaaaaaat5rbfg2arowbqq5qodsvbcv6yn63e2ewljlhwgbpv4fegqc3hvdq"
+  default   = "ocid1.compartment.oc1..aaaaaaaat5rbfg2arowbqq5qodsvbcv6yn63e2ewljlhwgbpv4fegqc3hvdq"
 }
 
 variable "spoke_vcns" {

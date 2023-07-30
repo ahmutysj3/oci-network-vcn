@@ -59,8 +59,8 @@ output "spoke_vcn_all_attributes" {
 
 output "kms_vault" {
   value = {
-    name = oci_kms_vault.main.display_name
-    id = oci_kms_vault.main.id
+    name    = oci_kms_vault.main.display_name
+    id      = oci_kms_vault.main.id
     mgt_end = oci_kms_vault.main.management_endpoint
   }
 }

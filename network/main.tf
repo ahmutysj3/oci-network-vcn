@@ -1,7 +1,7 @@
 resource "oci_identity_compartment" "network" {
-    compartment_id = var.main_compartment
-    description = "Network Infrastructure Lab"
-    name = "network"
+  compartment_id = var.main_compartment
+  description    = "Network Infrastructure Lab"
+  name           = "network"
 }
 
 resource "oci_core_vcn" "hub" {
@@ -114,10 +114,10 @@ resource "oci_core_route_table" "hub" {
 }
 
 resource "oci_core_network_security_group" "spoke1" {
-    for_each = var.nsg_params
-    compartment_id = oci_identity_compartment.network.id
-    vcn_id = oci_core_vcn.spoke["morty"].id
-    display_name = each.key
+  for_each       = var.nsg_params
+  compartment_id = oci_identity_compartment.network.id
+  vcn_id         = oci_core_vcn.spoke["morty"].id
+  display_name   = each.key
 }
 
 
@@ -218,19 +218,19 @@ resource "oci_core_security_list" "hub" {
 }
 
 resource "oci_kms_vault" "main" {
-    compartment_id = oci_identity_compartment.network.id
-    display_name = "${var.dc_name}-main-vault"
-    vault_type = "DEFAULT"
+  compartment_id = oci_identity_compartment.network.id
+  display_name   = "${var.dc_name}-main-vault"
+  vault_type     = "DEFAULT"
 }
 
 resource "oci_kms_key" "main" {
-    compartment_id = oci_identity_compartment.network.id
-    display_name = "${var.dc_name}-main-key"
-    key_shape {
-        algorithm = "AES"
-        length = 32
-    }
-    management_endpoint = oci_kms_vault.main.management_endpoint
+  compartment_id = oci_identity_compartment.network.id
+  display_name   = "${var.dc_name}-main-key"
+  key_shape {
+    algorithm = "AES"
+    length    = 32
+  }
+  management_endpoint = oci_kms_vault.main.management_endpoint
 }
 
 locals {

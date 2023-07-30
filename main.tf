@@ -2,9 +2,9 @@ module "network" {
   source = "./network"
 
   # General OCI Parameters
-  region_pri   = "us-ashburn-1"
+  region_pri       = "us-ashburn-1"
   main_compartment = var.main_compartment
-  
+
   # Network Params
   dc_name       = "trace"
   supernet_cidr = "10.1.0.0/16"
