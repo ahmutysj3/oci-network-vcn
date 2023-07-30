@@ -18,10 +18,6 @@ output "subnet_cidr" {
   value = module.network.subnet_cidr
 }
 
-output "kms_vault" {
-  value = module.network.kms_vault
-}
-
 output "net-compartment" {
   value = module.network.net-compartment
 }

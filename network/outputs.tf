@@ -57,18 +57,6 @@ output "spoke_vcn_all_attributes" {
   value       = { for k, v in oci_core_vcn.spoke : k => v }
 }
 
-output "kms_vault" {
-  value = {
-    name    = oci_kms_vault.main.display_name
-    id      = oci_kms_vault.main.id
-    mgt_end = oci_kms_vault.main.management_endpoint
-  }
-}
-
-output "kms_all" {
-  value = oci_kms_vault.main
-}
-
 output "net-compartment" {
   value = oci_identity_compartment.network.id
 }
