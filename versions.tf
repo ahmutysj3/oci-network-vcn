@@ -13,7 +13,6 @@ terraform {
     bucket = "trace-tf-unlocked-bucket"
     key    = "network/oci-terraform.tfstate"
     region = "us-east-1"
-    #dynamodb_table = "terraform_state"
   }
 }
 

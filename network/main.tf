@@ -1,6 +1,6 @@
 resource "oci_identity_compartment" "network" {
-    compartment_id = var.tenancy_ocid
-    description = "Network Infrastructure"
+    compartment_id = var.main_compartment
+    description = "Network Infrastructure Lab"
     name = "network"
 }
 
